@@ -1,0 +1,35 @@
+
+.container{
+    text-align: center;
+}
+.container-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-block: 2rem;
+}
+
+/* Card */
+.card{
+    width: 18rem;
+}
+
+.card-body{
+    background-color: mediumblue;
+    color: white;
+}
+
+.card-img-top{
+    height: 18rem;
+}
+
+/* Formulario */
+
+.form-control-mod{
+    background-color: mediumblue;
+   text-align: center;
+   color: white;
+   font-size: 1rem;
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
