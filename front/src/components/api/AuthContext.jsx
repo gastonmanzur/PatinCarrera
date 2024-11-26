@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
 
-
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -14,6 +13,8 @@ export const AuthProvider = ({ children }) => {
     setIsAuthenticated(true);
     localStorage.setItem('isAuthenticated', 'true'); // Guardar en localStorage
     
+   
+
   };
 
   const logout = () => {
@@ -23,10 +24,10 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{isAuthenticated, /*user,*/ login, logout }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext, AuthProvider);

@@ -16,7 +16,8 @@ const Register = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="continer-form">
+    <form onSubmit={handleSubmit} class="row g-3 needs-validation form-media form-login-register">
       <h2>Registro</h2>
       <input
         type="text"
@@ -24,16 +25,17 @@ const Register = () => {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         required
-      />
+        className="form-control form-control-log-reg"/>
       <input
         type="password"
         placeholder="Contraseña"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
-      />
-      <button type="submit">Registrar</button>
+        className="form-control form-control-log-reg"/>
+      <button type="submit" className='btn btn-primary form-control-mod boton'>Registrar</button>
     </form>
+    </div>
   );
 };
 

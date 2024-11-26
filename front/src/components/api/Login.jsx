@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import api from './api';
 import { useAuth } from './AuthContext'; 
+import './api.css';
 
 
 const Login = () => {
@@ -23,24 +24,26 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="continer-form">
+    <form onSubmit={handleSubmit} class="row g-3 needs-validation form-media form-login-register">
       <h2>Iniciar Sesión</h2>
       <input
         type="text"
         placeholder="Nombre de usuario"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        required
-      />
+        required 
+        className="form-control form-control-log-reg"/>
       <input
         type="password"
         placeholder="Contraseña"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
-      />
-      <button type="submit">Iniciar Sesión</button>
+        className="form-control form-control-log-reg"/>
+      <button type="submit" className='btn btn-primary form-control-mod boton'>Iniciar Sesión</button>
     </form>
+    </div>
   );
 };
 

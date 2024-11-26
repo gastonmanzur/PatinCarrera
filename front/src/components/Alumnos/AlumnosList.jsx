@@ -28,14 +28,14 @@ const AlumnoList = () => {
     <div>
        <h1>Crear nuevo alumno</h1>
       <AlumnoForm onAlumnoAdded={handleAlumnoAdded} />
-      <h1>Lista de Alumnos</h1>
+      <h1 className='titulo'>Lista de Alumnos</h1>
       <ul>
       <div className='container-cards'>
   {alumnos.map((alumno) => (
    
-    <li key={alumno._id}>
+    <li className='item-card' key={alumno._id}>
        <div className="card">
-      { <img src={`http://localhost:5000/uploads/${alumno.foto}`} alt={`${alumno.nombre} ${alumno.apellido}`} className="card-img-top"  />}
+      { <img src={`http://localhost:5000/uploads/${alumno.foto}`} alt={`${alumno.nombre} ${alumno.apellido}`} className="card-img"  />}
      <div className="card-body">
       <h5 className="card-title">{alumno.nombre} {alumno.apellido}</h5> 
       <p className="card-text">Categoria: {alumno.categoriaEdad}</p>

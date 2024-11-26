@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './Alumnos.css';
 
 const AlumnoDetail = () => {
   const { id } = useParams(); // Obtener el ID del alumno desde la URL
@@ -78,78 +79,91 @@ const AlumnoDetail = () => {
 
   return (
     <div>
-      <h1>Detalles del Alumno</h1>
       {!isEditing ? (
-        <>
-          <p><strong>Nombre:</strong> {alumno.nombre}</p>
-          <p><strong>Apellido:</strong> {alumno.apellido}</p>
-          <p><strong>Edad:</strong> {alumno.edad}</p>
-          <p><strong>Categoría:</strong> {alumno.categoria}</p>
-          <p><strong>Categoría por Edad:</strong> {alumno.categoriaEdad}</p>
-          {alumno.foto && <img src={`http://localhost:5000/uploads/${alumno.foto}`} alt="Foto del alumno" style={{ width: '150px', height: '150px' }} />}
-          <button onClick={() => setIsEditing(true)}>Editar</button>
-          <button onClick={handleDelete} style={{ color: 'red', marginLeft: '10px' }}>Eliminar</button>
-          <button onClick={() => navigate('/protegida')} style={{ marginLeft: '10px' }}>Volver</button>
-        </>
+      <div className='detalleAlumnos'>
+      
+       
+        <div class="card text-center info-alumno" >
+            <h1 class="card-title"><strong>{alumno.nombre} {alumno.apellido}</strong></h1>
+          <div class="card-header-mod">
+          <p class="card-text"><strong>Edad:</strong> {alumno.edad}</p>
+          <p class="card-text"><strong>Categoría:</strong> {alumno.categoria}</p>
+          <p class="card-text"><strong>Categoría por Edad:</strong> {alumno.categoriaEdad}</p>
+          </div>
+          <div class="text-center tetx-center-buttons">
+          <button onClick={() => setIsEditing(true)}  class="btn btn-primary form-control-mod">Editar</button>
+          <button onClick={handleDelete}  class="btn btn-primary form-control-mod">Eliminar</button>
+          <button onClick={() => navigate('/protegida')} class="btn btn-primary form-control-mod ">Volver</button>
+          </div>
+          </div>
+        <div className='card-img-top'>
+         {alumno.foto && <img src={`http://localhost:5000/uploads/${alumno.foto}`} alt="Foto del alumno" className='card-img-edit'/>}
+        </div>
+        
+       
+          </div>
+          
       ) : (
-        <form onSubmit={handleSubmit}>
-          <h2>Editar Alumno</h2>
-          <div>
-            <label>Nombre:</label>
+        <form onSubmit={handleSubmit} class="row g-3 needs-validation form-edit">
+          <h1>Editar Alumno</h1>
+          <div className="col-md-4 col-fom">
+            <label className="form-control form-control-mod">Nombre:</label>
             <input
               type="text"
               name="nombre"
               value={formData.nombre}
               onChange={handleChange}
               required
-            />
+              className="form-control"/>
           </div>
-          <div>
-            <label>Apellido:</label>
+          <div class="col-md-4 col-fom">
+            <label className="form-control form-control-mod">Apellido:</label>
             <input
               type="text"
               name="apellido"
               value={formData.apellido}
               onChange={handleChange}
               required
-            />
+              className="form-control"/>
           </div>
-          <div>
-            <label>Edad:</label>
+          <div class="col-md-4 col-fom">
+            <label className="form-control form-control-mod">Edad:</label>
             <input
               type="number"
               name="edad"
               value={formData.edad}
               onChange={handleChange}
               required
-            />
+              className="form-control"/>
           </div>
-          <div>
-            <label>Categoría:</label>
+          <div class="col-md-4 col-fom">
+            <label className="form-control form-control-mod">Categoría:</label>
             <input
               type="text"
               name="categoria"
               value={formData.categoria}
               onChange={handleChange}
               required
-            />
+              className="form-control"/>
           </div>
-          <div>
-            <label>Categoría por Edad:</label>
+          <div class="col-md-4 col-fom">
+            <label className="form-control form-control-mod">Categoría por Edad:</label>
             <input
               type="text"
               name="categoriaEdad"
               value={formData.categoriaEdad}
               onChange={handleChange}
               required
-            />
+              className="form-control"/>
           </div>
-          <div>
-            <label>Foto:</label>
-            <input type="file" onChange={handleFileChange} />
+          <div class="col-md-4 col-fom">
+            <label className="form-control form-control-mod">Foto:</label>
+            <input type="file" onChange={handleFileChange} className="form-control " />
           </div>
-          <button type="submit">Guardar Cambios</button>
-          <button type="button" onClick={() => setIsEditing(false)}>Cancelar</button>
+          <div className='button-edit'>
+          <button type="submit" className='btn btn-primary form-control-mod boton'>Guardar Cambios</button>
+          <button type="button" className='btn btn-primary form-control-mod boton2' onClick={() => setIsEditing(false)}>Cancelar</button>
+          </div>
         </form>
       )}
     </div>

@@ -14,6 +14,8 @@ import Login from './components/api/Login';
 import ProtectedRouter from './components/api/ProtectedRouter';
 import Protegida from './components/Protegida/Protegida';
 import LoginRegisterPage from './components/LoginRegisterPage/LoginRegisterPage';
+import Footer from './components/Footer/Footer';
+
 
 
     
@@ -24,8 +26,10 @@ import LoginRegisterPage from './components/LoginRegisterPage/LoginRegisterPage'
 
   <AuthProvider>
     <Router>
+     
+  
       <div className="container">
-      <Navbar />
+      <Navbar />   
       <main>
       <Routes>
       <Route path="/" element={<Home />} />
@@ -41,8 +45,10 @@ import LoginRegisterPage from './components/LoginRegisterPage/LoginRegisterPage'
           </Route>
       </Routes>
       </main>
+      <Footer />
       </div>
     </Router>
+    
     </AuthProvider>
   );
 }
