@@ -1,21 +1,24 @@
 import React, { createContext, useContext, useState } from 'react';
 
+
 const AuthContext = createContext();
+
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
+
     // Cargar el estado de autenticación desde localStorage
     return localStorage.getItem('isAuthenticated') === 'true';
   });
+
 
  
   const login = () => {
     setIsAuthenticated(true);
     localStorage.setItem('isAuthenticated', 'true'); // Guardar en localStorage
-    
-   
-
   };
+
+ 
 
   const logout = () => {
     setIsAuthenticated(false);
@@ -24,7 +27,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{isAuthenticated, /*user,*/ login, logout }}>
+    <AuthContext.Provider value={{isAuthenticated,  login, logout }}>
       {children}
     </AuthContext.Provider>
   );

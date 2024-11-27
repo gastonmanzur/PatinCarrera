@@ -25,7 +25,7 @@ const Login = () => {
 
   return (
     <div className="continer-form">
-    <form onSubmit={handleSubmit} class="row g-3 needs-validation form-media form-login-register">
+    <form onSubmit={handleSubmit} className="row g-3 needs-validation form-media form-login-register">
       <h2>Iniciar Sesión</h2>
       <input
         type="text"

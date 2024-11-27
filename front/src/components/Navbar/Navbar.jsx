@@ -1,18 +1,18 @@
 import React from "react";
 import { Link, Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "../api/AuthContext";
+import Avvvatars from 'avvvatars-react';
 import "./Navbar.css";
 
-const Navbar = () => {
-  
-  
 
+const Navbar = () => {
   const { logout, login, isAuthenticated } = useAuth();
 
+  
 
   const handleLogout = () => {
     logout();
-    console.log({isAutenticated})
+    console.log({ isAutenticated });
     // alert('Sesión cerrada');
   };
 
@@ -66,24 +66,31 @@ const Navbar = () => {
                 Contacto
               </Link>
             </li>
-      
-           </ul>
-         
-           {!isAuthenticated ? (
-  <>
-    <Link className="nav-link" to="/login">
-      Iniciar sesión
-    </Link>
-    <Link className="nav-link" to="/register">
-      Registrarse
-    </Link>
-  </>
-) : (
-  <Link className="nav-link" onClick={handleLogout}>
-    Cerrar sesión
-  </Link>
-)}
-         
+          </ul>
+
+          {!isAuthenticated ? (
+            <>
+              <Link className="nav-link" to="/login">
+                Iniciar sesión
+              </Link>
+              <Link className="nav-link" to="/register">
+                Registrarse
+              </Link>
+            </>
+          ) : (
+
+            <>
+              <Link>
+              <Avvvatars 
+              value={login}/>
+              </Link>
+
+            <Link className="nav-link" onClick={handleLogout}>
+              Cerrar sesión
+            </Link>
+
+                        </>
+          )}
         </div>
       </div>
     </nav>

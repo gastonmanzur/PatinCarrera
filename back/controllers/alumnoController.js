@@ -87,5 +87,7 @@ const deleteAlumno = async (req, res) => {
   }
 };
 
+
+
 module.exports = { getAlumnos, getAlumnoById, createAlumno, updateAlumno, deleteAlumno,  upload, };
 

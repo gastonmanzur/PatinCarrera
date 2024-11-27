@@ -39,7 +39,7 @@ const AlumnoForm = ({ onAlumnoAdded }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} class="row g-3 needs-validation form-media">
+    <form onSubmit={handleSubmit} className="row g-3 needs-validation form-media">
       <div className="col-md-4 col-fom">
         <label className="form-control form-control-mod">Nombre</label>
         <input className="form-control" type="text" name="nombre" value={formData.nombre} onChange={handleChange} required />
@@ -67,7 +67,7 @@ const AlumnoForm = ({ onAlumnoAdded }) => {
       
       <button type="submit" className='btn btn-primary form-control-mod boton3'>Agregar Alumno</button>
     </form>
-  );
+  );  
 };
 
 
