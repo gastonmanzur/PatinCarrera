@@ -32,3 +32,5 @@ Avatar personalizado:
 Avatares generados automáticamente con iniciales o fotos subidas por el usuario.
 Diseño responsivo:
 Interfaz adaptada para dispositivos móviles y computadoras.
+
+continuar
