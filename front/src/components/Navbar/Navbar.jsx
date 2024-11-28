@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     logout();
-    console.log({ isAutenticated });
+  Navigate('/');
     // alert('Sesión cerrada');
   };
 

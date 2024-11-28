@@ -6,7 +6,7 @@ const ProtectedRouter = ( {element} ) => {
 
     if(!isAuthenticated){
 //    alert('Sesion iniciada');
-return isAuthenticated ? element : <Navigate to='/login' replace/>
+return isAuthenticated ? element : <Navigate to='/' replace/>
     }
 return <Outlet />
 

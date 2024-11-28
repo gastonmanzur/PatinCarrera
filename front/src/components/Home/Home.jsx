@@ -2,7 +2,7 @@ import React from 'react';
 // import { Route, Routes } from 'react-router-dom';
 import { useAuth } from '../api/AuthContext';
 import Login from '../api/Login';
-import Register from '../api/Register';
+import { Link, Navigate } from 'react-router-dom';
 
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
   <>
   
        <Login />
-      <Register />
+      <h5>Si aun no te has registrado hazlo aqui: </h5> <Link to={'/register'}><h5>Registro</h5></Link> 
      
   </>
 ) : (
