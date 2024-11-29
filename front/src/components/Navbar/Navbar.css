@@ -10,7 +10,7 @@ nav{
     background: rgb(0,0,0);
 background: -moz-linear-gradient(328deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(7,62,241,1) 30%, rgba(7,62,241,1) 30%, rgba(7,62,241,1) 39%, rgba(82,161,33,1) 39%, rgba(82,161,33,1) 49%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
 background: -webkit-linear-gradient(328deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(7,62,241,1) 30%, rgba(7,62,241,1) 30%, rgba(7,62,241,1) 39%, rgba(82,161,33,1) 39%, rgba(82,161,33,1) 49%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
-background: linear-gradient(328deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(7,62,241,1) 30%, rgba(7,62,241,1) 30%, rgba(7,62,241,1) 39%, rgba(82,161,33,1) 39%, rgba(82,161,33,1) 49%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
+background: linear-gradient(328deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(7,62,241,1) 30%, rgba(8,62,241,1) 30%, rgba(7,62,241,1) 39%, rgba(82,161,33,1) 39%, rgba(82,161,33,1) 49%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 margin-left: -9%;
 }
